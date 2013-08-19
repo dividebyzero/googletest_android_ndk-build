@@ -1,6 +1,7 @@
 # The MIT License (MIT)
 #
 # Copyright (c) 2013 Fukuta, Shinya.
+# Copyright (c) 2013 Ronan 'zero' Schwarz
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this software and associated documentation files (the "Software"), to deal in
@@ -21,3 +22,9 @@
 
 APP_MODULES := libgtest
 APP_STL := gnustl_static
+APP_GNUSTL_FORCE_CPP_FEATURES := exceptions rtti
+#set to true ONLY if you run on android 4.1 or higher ALL THE TIME
+APP_PIE :=false
+#support all platforms
+APP_ABI := all
+APP_PLATFORM:= android-9
