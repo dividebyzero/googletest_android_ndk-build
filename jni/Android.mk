@@ -1,6 +1,7 @@
 # The MIT License (MIT)
 #
 # Copyright (c) 2013 Fukuta, Shinya.
+# Copyright (c) 2013 Ronan 'zero' Schwarz
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this software and associated documentation files (the "Software"), to deal in
@@ -25,7 +26,9 @@ include $(CLEAR_VARS)
 
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_MODULE := libgtest
-LOCAL_C_INCLUDES := include .
+LOCAL_C_INCLUDES:= $(LOCAL_PATH)/../include .
+LOCAL_CFLAGS           := -DLINUX
+LOCAL_CPPFLAGS           := -DLINUX
 LOCAL_SRC_FILES := ../src/gtest-all.cc
 
 include $(BUILD_STATIC_LIBRARY)
